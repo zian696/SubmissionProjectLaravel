@@ -49,3 +49,4 @@ Route::get('/pengaturan', fn () => 'Pengaturan Admin')
 });
 
 // Hello world
+// HEllo world
