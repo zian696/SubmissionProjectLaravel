@@ -47,3 +47,5 @@ Route::get('/dashboard', fn () => 'Dashboard Admin')
 Route::get('/pengaturan', fn () => 'Pengaturan Admin')
 ->name('pengaturan'); // URL: /admin/pengaturan, nama: admin.pengaturan
 });
+
+// Hello world
