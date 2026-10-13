@@ -1,10 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdukController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
+Route::get('/produk/{id}', [ProdukController::class, 'show'])->name('produk.show');
+// Route::resource('produk', ProdukController::class);
 // Route::get('/halo', function () {
 // return 'Halo, selamat datang di Laravel 13!';
 // });
@@ -40,13 +44,15 @@ Route::get('/', function () {
 // return view('kontak', ['email' => 'info@kampus.ac.id']);
 // })->name('kontak');
 
-Route::prefix('admin')->name('admin.')->group(function () {
-Route::get('/dashboard', fn () => 'Dashboard Admin')
-->name('dashboard'); // URL: /admin/dashboard, nama: admin.dashboard
+// Route::prefix('admin')->name('admin.')->group(function () {
+// Route::get('/dashboard', fn () => 'Dashboard Admin')
+// ->name('dashboard'); // URL: /admin/dashboard, nama: admin.dashboard
 
-Route::get('/pengaturan', fn () => 'Pengaturan Admin')
-->name('pengaturan'); // URL: /admin/pengaturan, nama: admin.pengaturan
-});
+// Route::get('/pengaturan', fn () => 'Pengaturan Admin')
+// ->name('pengaturan'); // URL: /admin/pengaturan, nama: admin.pengaturan
+// });
 
 // Hello world
 // HEllo world
+
+ // 7 route CRUD sekaligus Data ke view dapat dikirim dengan array (view('a', ['x' => 1])), compact('x'), atau ->with('x', 1). Data formdan query string diambil lewat $request->input('nama') atau $request->query('q').
