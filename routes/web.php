@@ -2,12 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\MahasiswaController;
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
-Route::get('/produk/{id}', [ProdukController::class, 'show'])->name('produk.show');
+Route::get('/produk', [ProdukController::class, 'index']);
+// ->name('produk.index')
+
+Route::get('/produk/{id}', [ProdukController::class, 'show']);
+// ->name('produk.show');
+// Route::get('/profil', [MahasiswaController::class, 'profil'])->name('mahasiswa.profil');
 // Route::resource('produk', ProdukController::class);
 // Route::get('/halo', function () {
 // return 'Halo, selamat datang di Laravel 13!';

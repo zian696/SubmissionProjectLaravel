@@ -1,4 +1,4 @@
-<h1>Daftar Produk</h1>
+<!-- <h1>Daftar Produk</h1>
 <table border="1">
 <tr><th>No</th><th>Nama</th><th>Harga</th><th>Stok</th><th>Aksi</th></tr>
 @forelse ($produk as $p)
@@ -17,4 +17,4 @@
 @empty
 <tr><td colspan="5">Belum ada produk.</td></tr>
 @endforelse
-</table>
+</table> -->
